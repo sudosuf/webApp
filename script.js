@@ -91,6 +91,7 @@ self.addEventListener('activate', event => {
 let deferredPrompt;
 
 window.addEventListener('beforeinstallprompt', (e) => {
+  console.log('[PWA] Событие beforeinstallrompt сработало!');
   e.preventDefault();
   deferredPrompt = e;
   console.log('[PWA] beforeinstallprompt сработал');
