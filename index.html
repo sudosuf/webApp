@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Погода</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="icon/manifest.json">
+</head>
+<body>
+    <div class="app">
+        <header style="border-radius: 0px 0px 15px 15px;">
+            <button class="menu-button">Меню</button>
+            <button id="installButton" class="install-button">
+    Установить приложение
+</button>
+            <h1>Погода</h1>
+        </header>
+        <div class="main-content">
+            <div class="current-weather" style="background-image: url('img/city_1.webp'); margin-top: -4%; z-index: -1; position: relative; font-size: xxx-large;">
+                <div class="weather-info">
+                    <h2>Нью-Йорк</h2>
+                    <p>25°C</p>
+                    <p>Солнечно</p>
+                </div>
+            </div>
+            <div class="forecast-strip">
+                <div class="forecast-item" style="background-image: url('img/suny.png'); background-size: contain;">
+                    <p>Пн</p>
+                    <p>23°C</p>
+                    <p>солнечно</p>
+                </div>
+                <div class="forecast-item" style="background-image: url('img/cloudy.webp'); background-size: contain;">
+                    <p>Вт</p>
+                    <p>22°C</p>
+                    <p>облачно</p>
+                </div>
+                <div class="forecast-item" style="background-image: url('img/suny.png'); background-size: contain;">
+                    <p>Ср</p>
+                    <p>24°C</p>
+                    <p>солнечно</p>
+                </div>
+                <div class="forecast-item" style="background-image: url('img/suny.png'); background-size: contain;">
+                    <p>Чт</p>
+                    <p>21°C</p>
+                    <p>дождь</p>
+                </div>
+                <div class="forecast-item" style="background-image: url('img/cloudy.webp'); background-size: contain;">
+                    <p>Пт</p>
+                    <p>20°C</p>
+                    <p>облачно</p>
+                </div>
+                <div class="forecast-item" style="background-image: url('img/suny.png'); background-size: contain;">
+                    <p>Сб</p>
+                    <p>25°C</p>
+                    <p>Солнечно</p>
+                </div>
+                <div class="forecast-item" style="background-image: url('img/suny.png'); background-size: contain;">
+                    <p>Вс</p>
+                    <p>26°C</p>
+                    <p>солнечно</p>
+                </div>
+            </div>
+
+        <!-- Вставьте это в ваш index.html (например, в хедер) -->
+
+            </div>
+        <div class="menu" style="display: none;">
+          <button class="back-button">Назад</button>
+            <input type="text" class="search-input" placeholder="Поиск города">
+            <div class="menu-items">
+                <div class="menu-item" data-city="Нью-Йорк" data-image="img/city_1.webp" style="background-image: url('img/city_1.webp')">
+                    <h3>Нью-Йорк</h3>
+                    <p>25°C</p>
+                </div>
+                <div class="menu-item" data-city="Рим" data-image="img/city_2.webp" style="background-image: url('img/city_2.webp')">
+                    <h3>Рим</h3>
+                    <p>22°C</p>
+                </div>
+                <div class="menu-item" data-city="Буэнос-Айрес" data-image="img/city_3.webp" style="background-image: url('img/city_3.webp')">
+                    <h3>Буэнос-Айрес</h3>
+                    <p>24°C</p>
+                </div>
+                <div class="menu-item" data-city="Москва" data-image="img/city_6.webp" style="background-image: url('img/city_6.webp')">
+                    <h3>Москва</h3>
+                    <p>25°C</p>
+                </div>
+                <div class="menu-item" data-city="Стамбул" data-image="img/city_5.webp" style="background-image: url('img/city_5.webp')">
+                    <h3>Стамбул</h3>
+                    <p>25°C</p>
+                </div>
+                <div class="menu-item" data-city="Париж" data-image="img/city_7.webp" style="background-image: url('img/city_7.webp')">
+                    <h3>Париж</h3>
+                    <p>25°C</p>
+                </div>
+            </div>
+        </div>
+        <div class="city-page" style="display: none;">
+           
+            <div class="city-weather" style="background-image: url('img/city_1.webp'); margin-top: -4%; z-index: -1; position: relative;">
+                <div class="weather-info">
+                    <h2>Название города</h2>
+                    <p>25°C</p>
+                    <p>Солнечно</p>
+
+</div>
+            </div>
+            <div class="forecast-strip">
+                <div class="forecast-item" style="background-image: url('img/suny.png'); background-size: contain;">
+                    <p>Пн</p>
+                    <p>23°C</p>
+                    <p>солнечно</p>
+                </div>
+                <div class="forecast-item" style="background-image: url('img/cloudy.webp'); background-size: contain;">
+                    <p>Вт</p>
+                    <p>22°C</p>
+                    <p>облачно</p>
+                </div>
+                <div class="forecast-item" style="background-image: url('img/suny.png'); background-size: contain;">
+                    <p>Ср</p>
+                    <p>24°C</p>
+                    <p>солнечно</p>
+                </div>
+                <div class="forecast-item" style="background-image: url('img/suny.png'); background-size: contain;">
+                    <p>Чт</p>
+                    <p>21°C</p>
+                    <p>дождь</p>
+                </div>
+                <div class="forecast-item" style="background-image: url('img/cloudy.webp'); background-size: contain;">
+                    <p>Пт</p>
+                    <p>20°C</p>
+                    <p>облачно</p>
+                </div>
+                <div class="forecast-item" style="background-image: url('img/suny.png'); background-size: contain;">
+                    <p>Сб</p>
+                    <p>25°C</p>
+                    <p>Солнечно</p>
+                </div>
+                <div class="forecast-item" style="background-image: url('img/suny.png'); background-size: contain;">
+                    <p>Вс</p>
+                    <p>26°C</p>
+                    <p>солнечно</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+
+</body>
+</html>

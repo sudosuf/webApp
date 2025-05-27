@@ -1,0 +1,159 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.app {
+    max-width: 100vw;
+    overflow-x: hidden;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    border-radius: 0px 0px 15px 15px;
+}
+
+.menu-button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.current-weather, .city-weather {
+    height: 50vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-shadow: 1px 1px 2px black;
+    margin-top: -4%;
+    z-index: -1;
+    position: relative;
+}
+
+.weather-info {
+    text-align: center;
+}
+
+.forecast-strip {
+    display: flex;
+    overflow-x: auto;
+    padding: 10px;
+    background-color: #f0f0f0;
+}
+
+.forecast-item {
+    min-width: 100px;
+    margin-right: 10px;
+    text-align: center;
+    flex-shrink: 0;
+    height: 100px;
+    padding-top: 5%;
+    border-radius: 15px;
+    background-size: contain;
+    background-position: center;
+}
+
+.menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    overflow-y: auto;
+    display: none;
+}
+
+.search-input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    font-size: 16px;
+    margin-top: 10%;
+}
+
+.menu-item {
+    height: 200px;
+    display: flex;
+    flex-direction: column-reverse;
+    color: white;
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 10px;
+    text-shadow: 1px 1px 2px black;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-content: flex-end;
+}
+
+.city-page {
+    display: none;
+}
+
+.back-button {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.menu .menu-items .menu-item h3{
+    font-size: 36px;
+}
+
+.menu-item p{
+    font-size: 72px;
+}
+
+.menu-items h3{
+    font-size: 36px;
+}
+
+.menu-items p{
+    font-size: 72px;
+}
+
+/* Добавьте в style.css */
+.install-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 12px 24px;
+    background: #2196F3;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 16px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+
+.install-button:hover {
+    background: #1976D2;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+}
+
+.install-button:active {
+    transform: translateY(0);
+}
